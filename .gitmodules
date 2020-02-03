@@ -1,0 +1,3 @@
+[submodule "react-native-shaker-component"]
+	path = react-native-shaker-component
+	url = https://github.com/BigSmallXYZ/react-native-shaker-component

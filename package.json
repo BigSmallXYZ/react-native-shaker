@@ -1,0 +1,43 @@
+{
+  "name": "react-native-shaker",
+  "title": "React Native Shaker",
+  "version": "1.0.0",
+  "description": "Shaker is the simplest way to users give feedback into your react-native aplication.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigSmallXYZ/react-native-shaker.git",
+    "baseUrl": "https://github.com/BigSmallXYZ/react-native-shaker"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "Anderson Ribeiro",
+    "email": "anderson@bigsmall.xyz"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "@rnhooks/keyboard": "^0.0.2",
+    "react-native-view-shot": "^3.1.2",
+    "react-native-animatable": "^1.3.3",
+    "use-timeout": "^1.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "react-native-shake": "^3.4.0",
+    "react-native-view-shot": "^3.1.2",
+    "react-native": ">=0.59.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.8.3",
+    "react-native-view-shot": "^3.1.2",
+    "react-native-shake": "^3.4.0",
+    "react-native": "^0.59.10"
+  }
+}
