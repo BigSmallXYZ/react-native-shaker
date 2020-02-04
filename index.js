@@ -10,6 +10,7 @@ function detectShake({ shakeTimes, capture }) {
     if (shakeTimeout) clearTimeout(shakeTimeout)
     if (shakesQuantity >= (shakeTimes - 1)) {
       capture()
+      shakesQuantity = 0
     } else {
       shakesQuantity += 1
       shakeTimeout = setTimeout(() => (shakesQuantity = 0), 1000)
