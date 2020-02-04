@@ -7,11 +7,11 @@ function detectShake({ shakeTimes, capture }) {
   let shakeTimeout = null
 
   RNShake.addEventListener('ShakeEvent', () => {
-    if ((shakeTimes - 1) === shakesQuantity) {
+    if (shakeTimeout) clearTimeout(shakeTimeout)
+    if (shakesQuantity >= (shakeTimes - 1)) {
       capture()
     } else {
       shakesQuantity += 1
-      if (shakeTimeout) clearTimeout(shakeTimeout)
       shakeTimeout = setTimeout(() => (shakesQuantity = 0), 1000)
     }
   })
