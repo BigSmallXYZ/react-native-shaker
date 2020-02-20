@@ -1,13 +1,13 @@
 # react-native-shaker
 Shaker is the simplest way to users give feedback into your react-native aplication.
 
+## Getting Started
+To start access https://useshaker.com, register and follow these steps.
+
 ## Installing 
 ```bash
 
 yarn add react-native-shaker
-
-# we need this native dependencies to shaker to work
-yarn add react-native-shake react-native-view-shot
 
 cd ios && pod install && cd ..
 ```

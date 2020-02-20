@@ -1,12 +1,17 @@
 import Shaker from './react-native-shaker-component'
 
-import RNShake from 'react-native-shake'
+import { NativeModules, DeviceEventEmitter } from 'react-native'
+const { Shaker: ShakerNative } = NativeModules
+
+async function takeScreenshot () {
+  return ShakerNative.takeScreenshot()
+}
 
 function detectShake({ shakeTimes, capture }) {
   let shakesQuantity = 0
   let shakeTimeout = null
 
-  RNShake.addEventListener('ShakeEvent', () => {
+  DeviceEventEmitter.addListener('ShakerShakeEvent', () => {
     if (shakeTimeout) clearTimeout(shakeTimeout)
     if (shakesQuantity >= (shakeTimes - 1)) {
       capture()
@@ -21,6 +26,7 @@ function detectShake({ shakeTimes, capture }) {
 export default function ShakerExtended (component, params) {
   return Shaker(component, {
     ...params,
-    detectShakeFn: detectShake
+    detectShakeFn: detectShake,
+    takeScreenshot
   })
 }
