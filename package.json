@@ -1,7 +1,7 @@
 {
   "name": "react-native-shaker",
   "title": "React Native Shaker",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Shaker is the simplest way to users give feedback into your react-native aplication.",
   "main": "index.js",
   "scripts": {
